@@ -1,0 +1,609 @@
+/* General Enhancements */
+body {
+    /* Keep existing background styles */
+    background-image:
+        linear-gradient(rgba(27, 27, 27, 0.7), rgba(27, 27, 27, 0.7)), /* Slightly darker overlay for better contrast */
+        url('imagens/fundo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Smooth scroll for better navigation experience */
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    background-color: rgb(27, 27, 27);
+    padding: 10px 0;
+    text-align: center;
+    max-width: 1260px;
+    border-radius: 8px;
+    margin: 20px auto;
+    position: relative;
+    /* Add a subtle 3D effect with shadow */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    /* Add a slight border for definition */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Navigation Links */
+nav a {
+    font-family: 'Michroma', sans-serif;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Enhanced transitions */
+    border-radius: 8px;
+    /* Add subtle text shadow for readability */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+nav a:hover {
+    background-color: #4a4a4a; /* Slightly more distinct hover color */
+    transform: translateY(-2px); /* Lift effect on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Shadow on hover */
+}
+
+/* Main Content Area */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: rgb(27, 27, 27);
+    border-radius: 10px;
+    /* Deeper shadow for a floating effect */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+    /* Add a subtle gradient overlay or border for elegance */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: linear-gradient(to bottom right, rgba(27, 27, 27, 0.95), rgba(40, 40, 40, 0.95));
+}
+
+/* Video Section */
+.videoInicio {
+    position: relative;
+    padding-bottom: 56.25%;
+    max-width: 100%;
+    margin: 20px 0;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px; /* Rounded corners for the video container */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5); /* Shadow for video */
+}
+
+.videoInicio iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Remove default iframe border */
+}
+
+/* Text Styles */
+.textos {
+    font-family: 'Michroma', sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 3.5em;
+    /* Add subtle text shadow for a glowing effect */
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 25px rgba(255, 255, 255, 0.3);
+    letter-spacing: 2px; /* Increase letter spacing for a modern look */
+    line-height: 1.2;
+}
+
+.textosPequenos {
+    font-size: 1em;
+    font-family: 'Michroma', sans-serif;
+    color: #e0e0e0; /* Slightly lighter white for better contrast with justify */
+    text-align: justify;
+    line-height: 1.6; /* Improved readability */
+    padding: 0 10px; /* Add some padding for justified text */
+}
+
+.textosDescrisao {
+    font-size: 1em;
+    font-family: 'Michroma', sans-serif;
+    color: #e0e0e0;
+    text-align: center;
+    line-height: 1.5;
+}
+
+#placar {
+    margin-bottom: 0.2em;
+    /* Add a subtle underline or border effect */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+/* Media Queries (no changes to sizes, just ensuring consistency) */
+@media (max-width: 1000px) {
+    .textos {
+        font-size: 2rem;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.4), 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+
+    .corpoPrincipal {
+        font-size: 1.2rem;
+    }
+
+    .textosPequenos {
+        font-size: 0.8rem;
+        font-family: 'Michroma', sans-serif;
+        color: white;
+        text-align: justify;
+    }
+}
+
+/* Social Media */
+#redesSociaisTexto {
+    text-align: center;
+    color: white;
+    font-family: 'Michroma', sans-serif;
+    font-size: 1.5em; /* Make social media heading more prominent */
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.fotosRedes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.fotosRedes a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.08); /* Slightly more opaque background */
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Subtle border */
+}
+
+.fotosRedes a:hover {
+    transform: scale(1.15) rotate(5deg); /* More dynamic hover effect */
+    background-color: rgba(255, 255, 255, 0.25); /* Brighter hover background */
+    box-shadow: 0 0 20px rgba(93, 93, 255, 0.6); /* Glowing shadow on hover */
+}
+
+.redesSociais {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(0.9); /* Slightly dim social icons normally */
+    transition: filter 0.3s ease;
+}
+
+.fotosRedes a:hover .redesSociais {
+    filter: brightness(1.2); /* Brighten on hover */
+}
+
+/* Participating Teams Section */
+.tituloMenor {
+    font-size: 2rem;
+    font-family: 'Michroma', sans-serif;
+    color: white;
+    text-align: center;
+    margin-bottom: 25px; /* Add more space below title */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.timeParticipantes {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border-radius: 50%; /* Make team logos circular */
+    border: 2px solid transparent; /* Initial transparent border */
+    object-fit: cover; /* Ensure images fit well */
+}
+
+.timeParticipantes:hover {
+    transform: scale(1.3); /* Slightly larger scale on hover */
+    box-shadow: 0px 0px 25px rgba(93, 93, 255, 0.7), 0px 0px 40px rgba(93, 93, 255, 0.5); /* More vibrant shadow */
+    border-color: #5d5dff; /* Blue border on hover */
+}
+
+.containerTimes {
+    text-align: center;
+    display: flex; /* Use flexbox for better alignment */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center; /* Center items */
+    gap: 20px; /* Space between team logos */
+    padding: 20px 0;
+}
+
+/* Sponsors */
+.patrocinadores {
+    width: 8rem;
+    height: auto;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    margin: 0 2%;
+    filter: grayscale(80%); /* Desaturate sponsors slightly */
+    opacity: 0.8; /* Slight transparency */
+}
+
+.patrocinadores:hover {
+    transform: scale(1.25); /* Slightly larger hover scale */
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.6), 0px 0px 15px rgba(255, 255, 255, 0.3); /* Enhanced shadow */
+    filter: grayscale(0%); /* Full color on hover */
+    opacity: 1; /* Fully opaque on hover */
+}
+
+.patrocinadoresPosicao {
+    text-align: center;
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 30px; /* More space between sponsors */
+}
+
+/* Scoreboard Section */
+.placar-container {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px; /* Add some padding around the container */
+}
+
+.match-card {
+    border: 1px solid rgba(255, 255, 255, 0.15); /* Slightly more prominent border */
+    border-radius: 12px; /* More rounded corners */
+    padding: 25px; /* Increase padding */
+    background: linear-gradient(to top left, rgba(0, 0, 0, 0.3), rgba(20, 20, 20, 0.3)); /* Subtle gradient background */
+    overflow: hidden;
+    position: relative; /* For potential pseudo-elements */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Deeper shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.match-card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7); /* More intense shadow on hover */
+}
+
+.match-status {
+    font-family: 'Michroma', sans-serif;
+    text-align: center;
+    font-size: 0.9rem; /* Slightly larger status text */
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px; /* More spacing */
+    text-transform: uppercase;
+    /* Add a background badge effect */
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 5px;
+    animation: none; /* Remove default blink animation for status, will handle separately for live */
+}
+
+.status-live {
+    color: white;
+    background-color: #ff4757;
+    box-shadow: 0 0 15px rgba(255, 71, 87, 0.7);
+    animation: blink-animation 1.5s infinite alternate; /* Blink animation for live status */
+}
+
+.status-final {
+    color: #d4d4d4; /* Lighter grey for final */
+    background-color: rgba(164, 164, 164, 0.1);
+}
+
+.status-soon {
+    color: #4CAF50; /* Brighter green for soon */
+    background-color: rgba(46, 213, 115, 0.1);
+}
+
+@keyframes blink-animation {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(0.98);
+    }
+}
+
+.match-teams {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures teams are pushed to edges */
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.team.team-a { /* Specific styling for team A to align left */
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.team.team-b {
+    flex-direction: row-reverse; /* Swap icon and name for team B */
+    justify-content: flex-start; /* Keep name to the left of the score */
+    text-align: right; /* Align team B name to the right */
+}
+
+.team-name {
+    font-family: 'Michroma', sans-serif;
+    color: white;
+    font-size: 1.3rem; /* Slightly larger team names */
+    text-align: left;
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis if name is too long */
+}
+
+.team.team-b .team-name {
+    text-align: right;
+}
+
+
+.score {
+    font-family: 'Michroma', sans-serif;
+    color: #5d5dff; /* Vibrant blue for scores */
+    font-size: 3em; /* Larger score */
+    font-weight: bold;
+    margin: 0 25px; /* Adjusted margin */
+    flex-shrink: 0;
+    text-shadow: 0 0 10px rgba(93, 93, 255, 0.6), 0 0 20px rgba(93, 93, 255, 0.4);
+}
+
+.team img {
+    width: 55px; /* Slightly larger team logos in scoreboard */
+    height: 55px;
+    flex-shrink: 0;
+    border-radius: 50%; /* Circular team logos */
+    border: 2px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1000px) {
+    .team-name {
+        font-size: 1.1rem;
+    }
+    .score {
+        font-size: 2.5rem;
+    }
+    .team {
+        gap: 10px;
+    }
+    .team img {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 600px) {
+    .team-name {
+        display: none;
+    }
+    .score {
+        font-size: 2rem;
+        margin: 0 15px;
+    }
+    .team {
+        justify-content: center;
+        gap: 5px; /* Reduce gap for smaller screens */
+    }
+    .match-teams {
+        justify-content: space-around; /* Distribute space evenly */
+    }
+    .team img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Team Table Section */
+.tabelaTimes {
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.2); /* Slightly darker background for the table container */
+    border-radius: 10px;
+    overflow: hidden; /* Ensures rounded corners are applied */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.tabelaTimes table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabelaTimes tbody tr {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px; /* Increased padding for rows */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08); /* Thinner, more subtle border */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.tabelaTimes tbody tr:last-child {
+    border-bottom: none;
+}
+
+.tabelaTimes tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.15); /* Slightly darker even rows */
+}
+
+.tabelaTimes tbody tr:hover {
+    background-color: rgba(93, 93, 255, 0.2); /* More transparent blue on hover */
+    transform: translateX(5px); /* Slide effect on hover */
+}
+
+.team-list-item {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Slightly more gap */
+}
+
+.team-name-list {
+    font-family: 'Michroma', sans-serif;
+    color: white;
+    font-size: 1.15em; /* Slightly larger font */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+.team-list-item img {
+    width: 35px; /* Slightly larger icons */
+    height: 35px;
+    vertical-align: middle;
+    border-radius: 50%; /* Circular icons */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.team-stats {
+    font-family: 'Michroma', sans-serif;
+    color: #b0b0b0; /* Softer grey for stats */
+    font-size: 1.05em; /* Slightly larger font */
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+    .tabelaTimes tbody tr {
+        padding: 10px 15px;
+    }
+
+    .team-name-list {
+        font-size: 1em;
+    }
+
+    .team-stats {
+        font-size: 0.95em;
+    }
+
+    .team-list-item img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Gallery Section */
+.titulo-galeria {
+    font-family: 'Michroma', sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 2.8em; /* Slightly larger gallery title */
+    margin-bottom: 35px; /* More space below title */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Slightly larger min-width */
+    gap: 20px; /* More space between gallery items */
+    padding: 0 20px;
+}
+
+.gallery-item {
+    display: block;
+    overflow: hidden;
+    border-radius: 12px; /* More rounded corners */
+    aspect-ratio: 1 / 1;
+    position: relative;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6), 0 0 10px rgba(255, 255, 255, 0.1); /* Deeper and subtle white shadow */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.5s ease; /* Smoother transform */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.15) rotate(1deg); /* More pronounced zoom and slight rotate */
+    filter: brightness(1.2) saturate(1.1); /* Brighter and more saturated */
+}
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95); /* Darker background */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px); /* Subtle blur effect */
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 85%;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), 0 0 30px rgba(93, 93, 255, 0.5); /* More intense shadow and blue glow */
+    border-radius: 10px; /* Rounded corners for lightbox content */
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 25px; /* Slightly more space from top */
+    right: 35px; /* Slightly more space from right */
+    font-size: 45px; /* Larger close button */
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.lightbox-close:hover {
+    transform: scale(1.3) rotate(5deg); /* More dynamic hover */
+    color: #ff6b6b; /* Reddish on hover */
+}
+
+/* Live Indicator */
+.live-indicator {
+    position: absolute;
+    top: 15px; /* Adjusted position */
+    right: 25px;
+    background: linear-gradient(to right, #ff4757, #e62e3f); /* Gradient background */
+    color: white;
+    font-family: 'Michroma', sans-serif;
+    font-size: 0.85rem; /* Slightly larger font */
+    font-weight: bold;
+    padding: 7px 14px; /* Slightly more padding */
+    border-radius: 20px; /* More pill-shaped */
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* More spacing */
+    box-shadow: 0 0 20px rgba(255, 71, 87, 0.8), 0 0 30px rgba(255, 71, 87, 0.5); /* More prominent glow */
+    animation: pulse-live 2s infinite ease-in-out; /* Changed animation for more elegance */
+    transform-origin: center;
+}
+
+@keyframes pulse-live {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+        box-shadow: 0 0 20px rgba(255, 71, 87, 0.8), 0 0 30px rgba(255, 71, 87, 0.5);
+    }
+    50% {
+        transform: scale(1.08);
+        opacity: 0.9;
+        box-shadow: 0 0 30px rgba(255, 71, 87, 0.9), 0 0 45px rgba(255, 71, 87, 0.7);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        box-shadow: 0 0 20px rgba(255, 71, 87, 0.8), 0 0 30px rgba(255, 71, 87, 0.5);
+    }
+}

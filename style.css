@@ -1,0 +1,463 @@
+header {
+    background-color: rgb(27, 27, 27);
+    padding: 10px 0;
+    text-align: center;
+    max-width: 1260px;
+    border-radius: 8px;
+    margin: 20px auto;
+    }
+
+nav a {
+    font-family: 'Michroma', sans-serif;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+    }
+
+nav a:hover {
+    background-color: #313131;
+}
+
+body {
+    background-image: 
+        linear-gradient(rgba(27, 27, 27, 0.6), rgba(27, 27, 27, 0.6)),
+        url('imagens/fundo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: rgb(27, 27, 27);
+    border-radius: 10px;
+
+}
+
+.videoInicio {
+    position: relative;
+    padding-bottom: 56.25%;
+    max-width: 100%;
+    margin: 20px 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.videoInicio iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.textos {
+    font-family: 'Michroma', sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 3.5em;
+}
+
+.textosPequenos {
+    font-size: 1em;
+    font-family: 'Michroma', sans-serif;
+    color: white;
+    text-align: justify;
+}
+
+.textosDescrisao {
+    font-size: 1em;
+    font-family: 'Michroma', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+#placar {
+    margin-bottom: 0.2em;
+}
+
+@media (max-width: 1000px) {
+  .textos {
+    font-size: 2rem;
+  }
+
+  .corpoPrincipal {
+    font-size: 1.2rem;
+  }
+  .textosPequenos {
+    font-size: 0.8rem;
+    font-family: 'Michroma', sans-serif;
+    color: white;
+    text-align: justify;
+}
+}
+
+/* REDES SOCIAIS */
+
+#redesSociaisTexto {
+    text-align: center;
+}
+
+.fotosRedes {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    gap: 15px;               
+    margin-top: 10px;
+}
+
+.fotosRedes a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.fotosRedes a:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+
+.redesSociais {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* PARTE DOS TIMES PARTICIPANTES */
+
+.tituloMenor {
+    font-size: 2rem;
+    font-family: 'Michroma', sans-serif;
+    color: white; 
+    text-align: center;
+}
+
+.timeParticipantes {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease; 
+}
+
+.timeParticipantes:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.containerTimes {
+    text-align: center;
+}
+
+/* PATROCINADORES */
+
+.patrocinadores {
+    width: 8rem;
+    height: auto;
+    flex-shrink: 0;
+    transition: transform 0.3s ease; 
+    margin: 0 2%;
+}
+
+.patrocinadores:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.patrocinadoresPosicao {
+    text-align: center;
+}
+
+/* PARTE DO PLACAR */
+.placar-container {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.match-card {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.match-status {
+    font-family: 'Michroma', sans-serif;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.status-live { color: #ff4757; animation: blink-animation 1.5s infinite; }
+.status-final { color: #a4a4a4; }
+.status-soon { color: #2ed573; }
+@keyframes blink-animation {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+.match-teams {
+    display: flex;
+    align-items: center;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-grow: 1;
+    flex-basis: 0;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.team.team-b {
+    justify-content: flex-start;
+}
+
+
+.team-name {
+    font-family: 'Michroma', sans-serif;
+    color: white;
+    font-size: 1.2rem;
+    text-align: left; 
+}
+
+.team.team-b .team-name {
+    text-align: left;
+}
+
+
+.score {
+    font-family: 'Michroma', sans-serif;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0 30px;
+    flex-shrink: 0; 
+}
+
+.team img {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1000px) {
+    .team-name { font-size: 1rem; }
+    .score { font-size: 2rem; }
+    .team { gap: 10px; }
+}
+
+@media (max-width: 600px) {
+    .team-name { display: none; }
+    .score { font-size: 1.5rem; margin: 0 10px; }
+    
+    .team { justify-content: center; } 
+    .match-teams { justify-content: space-between; }
+}
+
+/* PARTE DA TABELA DOS TIMES */
+
+.tabelaTimes {
+    margin-top: 20px;
+}
+
+.tabelaTimes table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabelaTimes tbody tr {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tabelaTimes tbody tr:last-child {
+    border-bottom: none;
+}
+
+.tabelaTimes tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.tabelaTimes tbody tr:hover {
+    background-color: rgba(93, 93, 255, 0.1);
+}
+
+.team-list-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.team-name-list {
+    font-family: 'Michroma', sans-serif;
+    color: white;
+    font-size: 1.1em;
+}
+
+.team-list-item img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.team-stats {
+    font-family: 'Michroma', sans-serif;
+    color: #ccc;
+    font-size: 1em;
+}
+
+@media (max-width: 768px) {
+    .team-name-list {
+        font-size: 1em;
+    }
+    .team-stats {
+        font-size: 0.9em;
+    }
+    .team-list-item img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* PARTE DA GALERIA */
+.titulo-galeria {
+    font-family: 'Michroma', sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 0 15px;
+}
+
+.gallery-item {
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 85%;
+    box-shadow: 0 0 30px rgba(0,0,0,0.7);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.lightbox-close:hover {
+    transform: scale(1.2);
+}
+
+/* INDICADOR AO VIVO */
+header {
+    background-color: rgb(27, 27, 27);
+    padding: 10px 0;
+    text-align: center;
+    max-width: 1260px;
+    border-radius: 8px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.live-indicator {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    background-color: #ff4757;
+    color: white;
+    font-family: 'Michroma', sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 15px rgba(255, 71, 87, 0.7);
+    animation: blink-live 1.8s infinite ease-in-out;
+}
+
+@keyframes blink-live {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
